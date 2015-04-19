@@ -22,7 +22,7 @@
         " -- ",
         "<enter>"
       ],
-      "disk_size": 10140,
+      "disk_size": "{{ user `vm_disk_size` }}",
       "guest_os_type": "ubuntu-64",
       "headless": "{{ user `headless` }}",
       "http_directory": "http",
@@ -40,8 +40,8 @@
       "type": "vmware-iso",
       "vm_name": "ubuntu1404",
       "vmx_data": {
-        "memsize": "512",
-        "numvcpus": "1"
+        "memsize": "{{ user `vm_memory` }}",
+        "numvcpus": "{{ user `vm_cpus` }}"
       }
     },
     {
@@ -182,6 +182,9 @@
     }
   ],
   "variables": {
+    "vm_cpus": "1",
+    "vm_memory": "512",
+    "vm_disk_size": "10140",
     "cleanup_pause": "",
     "cm": "nocm",
     "cm_version": "",
