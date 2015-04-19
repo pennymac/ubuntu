@@ -22,7 +22,7 @@ else
 endif
 
 # Packer does not allow empty variables, so only pass variables that are defined
-PACKER_VARS_LIST = 'cm=$(CM)' 'version=$(BOX_VERSION)'
+PACKER_VARS_LIST += 'cm=$(CM)' 'version=$(BOX_VERSION)'
 ifdef CM_VERSION
 	PACKER_VARS_LIST += 'cm_version=$(CM_VERSION)'
 endif
