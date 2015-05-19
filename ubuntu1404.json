@@ -144,13 +144,6 @@
       "vm_name": "ubuntu1404"
     }
   ],
-  "post-processors": [
-    {
-      "keep_input_artifact": false,
-      "output": "box/{{.Provider}}/ubuntu1404-{{user `cm`}}{{user `cm_version`}}-{{user `version`}}.box",
-      "type": "vagrant"
-    }
-  ],
   "provisioners": [
     {
       "environment_vars": [
